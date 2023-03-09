@@ -1,0 +1,61 @@
+<div class="bg-info "
+    style="min-height: 65vh; height: fit-content; width: 100%; display: flex; flex-flow: column nowrap; align-items: center; justify-content: center;">
+
+
+
+
+
+    <div class="card bg-light mb-3" style="display: flex; flex-flow: column wrap; min-width: 70%; width: fit-content;height: fit-content; align-content: center; justify-content: center;">
+        <div class="card-body" style="display: flex; align-content: center; justify-content: center; min-width: 100%; width: fit-content;">
+            <div class="card-title" style="display: flex; align-content: center; justify-content: center; min-width: 100%; width: fit-content;">
+                <div class="card text-white bg-primary mb-3" style="width: 80%">
+                    <div class="card-body" style="display: flex; flex-flow: column nowrap; align-items: center;">
+                        <label class="col-form-label mt-4" for="inputDefault"> Enter Ingredients</label>
+                        <input type="text"  [(ngModel)]="userInput" class="form-control" placeholder="Enter Ingredients"
+                            style="text-align: center; margin: 5px;" id="inputDefault" >
+                        <button type="submit" (click)="ngOnInit()" class="btn btn-light" style="width: fit-content; min-width: 15%;">Submit</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="card border-light mb-3" style="width: fit-content; width: 100%; min-height: 35%;">
+            <div class="card-body" style="display: flex; flex-wrap: wrap; align-content: center; justify-content: space-around; width: 100%;">
+                <div class="enlarge" *ngFor="let i of returnr.recipes" style=" margin: 17px;">
+                    <a class="" href="{{i.url}}" target="_blank">
+                        <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+                            <div class="card-header" style="display: flex; justify-content: center;">
+                                <img src="{{i.image}}" style="border-radius: 3%;"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">{{i.label}}</h4>
+                                <p class="card-text">{{i.yield}} Servings</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+</div>
